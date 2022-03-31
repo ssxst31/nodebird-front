@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import { Menu, Input, Row, Col } from "antd";
+import styled from "styled-components";
 import LoginForm from "./LoginForm";
 import UserProfile from "./UserProfile";
+
+const SearchInPut = styled(Input.Search)`
+  verticalalign: "middle";
+`;
 
 // eslint-disable-next-line react/prop-types
 const AppLayout = ({ children }) => {
@@ -23,11 +28,7 @@ const AppLayout = ({ children }) => {
           </Link>
         </Menu.Item>
         <Menu.Item key={3}>
-          <Input.Search
-            enterButton
-            style={{ verticalAlign: "middle" }}
-            onClick={setIsLoggedIn}
-          />
+          <SearchInPut enterButton onClick={setIsLoggedIn} />
         </Menu.Item>
         <Menu.Item key={4}>
           <Link href="/signup">
@@ -37,7 +38,11 @@ const AppLayout = ({ children }) => {
       </Menu>
       <Row gutter={8}>
         <Col xs={24} md={6}>
-          {isLoggedIn ? <UserProfile /> : <LoginForm />}
+          {isLoggedIn ? (
+            <UserProfile setIsLoggedIn={setIsLoggedIn} />
+          ) : (
+            <LoginForm setIsLoggedIn={setIsLoggedIn} />
+          )}
         </Col>
         <Col xs={24} md={6}>
           {children}
