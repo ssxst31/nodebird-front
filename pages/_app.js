@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import "antd/dist/antd.css";
+import wrapper from "../store/configureStore";
 
 const NodeBird = ({ Component }) => {
   return (
@@ -10,14 +11,13 @@ const NodeBird = ({ Component }) => {
         <meta charSet="utf-8" />
         <title>NodeBird</title>
       </Head>
-      공통메뉴
       <Component />
     </>
   );
 };
 
-export default NodeBird;
-
 NodeBird.propTypes = {
   Component: PropTypes.elementType.isRequired,
 };
+
+export default wrapper.withRedux(NodeBird);
