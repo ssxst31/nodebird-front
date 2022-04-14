@@ -9,13 +9,13 @@ export const initialState = {
       content: "첫 번째 게시글 #해시태그 #익스프레스",
       Images: [
         {
-          src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.jinbo.net%2Fdiary%2F382&psig=AOvVaw0MpG0pJVfKfdWafJwxvZy3&ust=1649151146245000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCICy6vSM-vYCFQAAAAAdAAAAABAJ",
+          src: "https://wonism.github.io/static/rxjs-302e84a92c1dcfa8e75d3a718a21d62d.jpg",
         },
         {
-          src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.jinbo.net%2Fdiary%2F382&psig=AOvVaw0MpG0pJVfKfdWafJwxvZy3&ust=1649151146245000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCICy6vSM-vYCFQAAAAAdAAAAABAJ",
+          src: "https://wonism.github.io/static/rxjs-302e84a92c1dcfa8e75d3a718a21d62d.jpg",
         },
         {
-          src: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.jinbo.net%2Fdiary%2F382&psig=AOvVaw0MpG0pJVfKfdWafJwxvZy3&ust=1649151146245000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCICy6vSM-vYCFQAAAAAdAAAAABAJ",
+          src: "https://wonism.github.io/static/rxjs-302e84a92c1dcfa8e75d3a718a21d62d.jpg",
         },
       ],
       Comment: [
