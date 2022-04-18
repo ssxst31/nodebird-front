@@ -11,6 +11,7 @@ import {
 import propTypes from "prop-types";
 import PostImages from "./PostImage";
 import CommentForm from "./CommentForm";
+import PostCardContent from "./PostCardContent";
 
 const PostCard = ({ post }) => {
   const [liked, setLiked] = useState(false);
@@ -66,7 +67,7 @@ const PostCard = ({ post }) => {
         <Card.Meta
           avatar={<Avatar>{post.User.nickName[0]}</Avatar>}
           title={post.User.nickName}
-          description={post.content}
+          description={<PostCardContent postData={post.content} />}
         ></Card.Meta>
       </Card>
       {commentFormOpened && (
