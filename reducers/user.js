@@ -14,37 +14,9 @@ export const loginRequestAction = (data) => {
   };
 };
 
-export const loginSuccessAction = (data) => {
-  return {
-    type: "LOG_IN_SUCCESS",
-    data,
-  };
-};
-
-export const loginFailureAction = (data) => {
-  return {
-    type: "LOG_IN_FAILURE",
-    data,
-  };
-};
-
 export const logoutRequestAction = (data) => {
   return {
     type: "LOG_OUT_Request",
-    data,
-  };
-};
-
-export const logoutSuccessAction = (data) => {
-  return {
-    type: "LOG_OUT_SUCCESS",
-    data,
-  };
-};
-
-export const logoutFailureAction = (data) => {
-  return {
-    type: "LOG_OUT_FAILURE",
     data,
   };
 };
@@ -61,7 +33,7 @@ const reducer = (state = initialState, action) => {
         ...state.user,
         isLoggingIn: true,
         isLoggedIn: true,
-        me: action.data,
+        me: { ...action.data, nickName: "ssxst31" },
       };
     case "LOG_IN_FAILURE":
       return { ...state.user, isLoggingIn: true, isLoggedIn: true };
