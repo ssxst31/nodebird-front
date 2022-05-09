@@ -9,7 +9,7 @@ function* logIn(action) {
   try {
     // const result = yield call(logInAPI, action.data); // fork 비동기 함수 호출 call 동기 함수 호출 첫번째 자리는 함수 나머지는 매개변수 call의 특성
     yield delay(1000);
-    yield put({ type: "LOG_IN_SUCCESS" });
+    yield put({ type: "LOG_IN_SUCCESS", data: action.data });
   } catch (err) {
     yield put({ type: "LOG_IN_FAILURE", data: err.response.data });
   }
